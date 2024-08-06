@@ -1,2 +1,3 @@
 # goorm_deepdive
-[kakao X goorm] Deep Dive 풀스택 10회차
+
+결과물 저장을 위한 Repository 입니다.
