@@ -1,5 +1,5 @@
 .main-container {
-    background-color: #fff;
+    background-color: var(--primary);
     margin-top: 44px;
     margin-bottom: 44px;
     display: flex;
@@ -23,7 +23,7 @@
 
 .stories {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--primary);
     padding: 16px 0;
     position: relative;
     overflow: hidden;
@@ -35,7 +35,7 @@
     bottom: 0;
     width: 100%;
     height: 1px;
-    background-color: #dbdbdb;
+    background-color: var(--border);
 }
 
 .posts {
@@ -65,7 +65,7 @@
     width: 64px;
     height: 64px;
     fill: none;
-    stroke: #c7c7c7;
+    stroke: var(--story-border);
     stroke-width: 1.5;
 }
 
@@ -83,7 +83,7 @@
 .story-user {
     font-size: 12px;
     font-weight: 400;
-    color: #999999;
+    color: var(--text-light);
     text-transform: lowercase;
     max-width: 72px;
     text-overflow: ellipsis;
@@ -118,8 +118,8 @@
 }
 
 .post-header {
-    background-color: #fff;
-    border-bottom: 1px solid #dbdbdb;
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,7 +184,7 @@
 }
 
 .post-footer {
-    background-color: #fff;
+    background-color: var(--primary);
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -236,14 +236,14 @@
 .post-description span {
     font-size: 14px;
     font-weight: 400;
-    color: #262626;
+    color: var(--text-dark);
 }
 
 .post-likes a,
 .post-description a {
     font-size: 14px;
     font-weight: 500;
-    color: #262626;
+    color: var(--text-dark);
     text-decoration: none;
 }
 
@@ -254,7 +254,7 @@
 .post-date-time {
     font-size: 10px;
     font-weight: 400;
-    color: #999999;
+    color: var(--text-light);
     text-transform: uppercase;
 }
 
@@ -271,7 +271,7 @@
     }
 
     .stories {
-        border: 1px solid #dbdbdb;
+        border: 1px solid var(--border);
         border-radius: 4px;
     }
 
@@ -284,7 +284,7 @@
     }
 
     .post {
-        border: 1px solid #dbdbdb;
+        border: 1px solid var(--border);
         border-radius: 4px;
     }
 
@@ -299,7 +299,7 @@
 
 @media (min-width: 1024px){
     .main-container {
-        background-color: #fafafa;
+        background-color: var(--secondary);
     }
 
     .content {
