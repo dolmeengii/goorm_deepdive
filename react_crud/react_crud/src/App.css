@@ -1,0 +1,33 @@
+main {
+    padding: 48px;
+    background-color: #e8b872;
+}
+
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem;   
+    border-radius: 4px;
+}
+
+.total-container {
+    display: flex;
+    justify-content: end;
+    margin: 1rem;
+    font-size: 24px;
+}
+
+#btn {
+    background-color: #8da959;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#btn:hover {
+    cursor: pointer;
+    transition: transform 450ms;
+    transform: scale(1.1);
+}
