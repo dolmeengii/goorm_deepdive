@@ -1,20 +1,20 @@
-import React from 'react'
-import { BsGithub } from 'react-icons/bs';
-import styles from './Footer.module.scss';
+import React from "react";
+import { BsGithub } from "react-icons/bs";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className='container'>
+      <div className="container">
         <div className={styles.contacts}>
-          <a href="https://github.com">
+          <a href="https://github.com/dolmeengii">
             {" "}
             <BsGithub />
           </a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,19 +1,38 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { FirebaseApp, getApp, initializeApp } from "firebase/app";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
-// Your web app's Firebase configuration
+export let app: FirebaseApp;
+
 const firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "react-next-firebase-chat-app",
-    storageBucket: "react-next-firebase-chat-app.appspot.com",
-    messagingSenderId: "196291088065",
-    appId: "1:196291088065:web:59b5e6725c74ce041b8e40"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+try {
+  app = getApp("app");
+} catch (e) {
+  app = initializeApp(firebaseConfig, "app");
+}
 
-export default app;
+const firebase = initializeApp(firebaseConfig);
+
+export default firebase;
+
+const auth = getAuth();
+
+export const signupEmail = (email: string, password: string) => {
+  return createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const loginEmail = (email: string, password: string) => {
+  return signInWithEmailAndPassword(auth, email, password);
+};

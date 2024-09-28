@@ -1,41 +1,53 @@
-import React, { FC } from 'react'
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import styles from './Form.module.scss';
+import React, { FC } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import styles from "./Form.module.scss";
+import { signupEmail } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 type FormProps = {
   title: string;
   getDataForm: (email: string, password: string) => void;
   firebaseError: string;
-}
+};
 
 type Inputs = {
   email: string;
   password: string;
-}
+};
 
 const Form: FC<FormProps> = ({ title, getDataForm, firebaseError }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<Inputs>({
+    mode: "onChange",
+  });
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<Inputs>({
-    mode: 'onChange'
-  })
-
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<FieldValues> = ({ email, password }) => {
     getDataForm(email, password);
+    signupEmail(email, password)
+      .then((result) => {
+        // const user = result.user;
+      })
+      .catch((err) => console.log(err));
     reset();
-  }
+  };
 
   const userEmail = {
-    required: "필수 필드입니다."
-  }
+    required: "필수 필드입니다.",
+  };
 
   const userPassword = {
     required: "필수 필드입니다.",
     minLength: {
       value: 6,
-      message: "최소 6자입니다."
-    }
-  }
+      message: "최소 6자입니다.",
+    },
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -45,13 +57,11 @@ const Form: FC<FormProps> = ({ title, getDataForm, firebaseError }) => {
           placeholder="E-mail"
           {...register("email", userEmail)}
         />
-        {errors?.email &&
+        {errors?.email && (
           <div>
-            <span className={styles.form_error}>
-              {errors.email.message}
-            </span>
+            <span className={styles.form_error}>{errors.email.message}</span>
           </div>
-        }
+        )}
       </div>
 
       <div>
@@ -60,20 +70,18 @@ const Form: FC<FormProps> = ({ title, getDataForm, firebaseError }) => {
           placeholder="Password"
           {...register("password", userPassword)}
         />
-        {errors?.password &&
+        {errors?.password && (
           <div>
-            <span className={styles.form_error}>
-              {errors.password.message}
-            </span>
+            <span className={styles.form_error}>{errors.password.message}</span>
           </div>
-        }
+        )}
       </div>
-      <button type='submit'>{title}</button>
+      <button type="submit">{title}</button>
       {firebaseError && (
         <span className={styles.form_error}>{firebaseError}</span>
       )}
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
