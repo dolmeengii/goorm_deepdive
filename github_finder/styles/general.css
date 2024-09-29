@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: var(--footer);
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+:root {
+    --blue: #4582eb;
+    --white: #ffffff;
+    --gray: #acb5bd;
+    --green: #01b974;
+    --teal: #1aa1b8;
+
+    --border: #f6f6f6;
+    --footer: #f8f9fa;
+
+    --description: #90989e;
+}
