@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Finder</title>
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="home-btn">
+        <a href="index.html">GitHub Finder</a>
+      </button>
+    </header>
+    <main class="main-container">
+      <div class="box-container">
+        <div class="search-box-container">
+          <h2 class="search-box-title">Search GitHub Users</h2>
+          <p class="search-box-description">
+            Enter a username to fetch a user profile and repos
+          </p>
+          <form>
+            <input id="search-input-box" type="text" />
+          </form>
+          <button id="submit-btn" type="button">검색</button>
+        </div>
+      </div>
+      <div class="box-container">
+        <div class="user-profile-box-container"></div>
+      </div>
+      <div class="latest-repos-box-container">
+        <h2 class="latest-repos-title">Latest Repos</h2>
+        <div class="latest-repo-box"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <span class="footer-copyright">GitHub Finder &copy;dolmeengii</span>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

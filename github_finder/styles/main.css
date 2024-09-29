@@ -1,0 +1,189 @@
+.main-container {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-container {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Searchh Box Container */
+.search-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    height: auto;
+    line-height: 32px;
+}
+
+/* .search-box-container #submit-btn {
+    /* display: hidden; */
+    /* border: none; */ 
+
+.search-box-title {
+    font-weight: 900;
+}
+
+.search-box-description {
+    color: var(--description);
+}
+
+#search-input-box {
+    border: 1px solid var(--border);
+    height: 28px;
+}
+
+#search-input-box:focus {
+    outline: none;
+}
+
+
+
+/* User Profile Box Container */
+.user-profile-box-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    height: auto;
+}
+
+.img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-box .profile-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 12px;
+}
+
+.img-box .profile-btn {
+    background-color: var(--blue);
+    height: 28px;
+    border: none;
+    border-radius: 12px;
+}
+
+.img-box .profile-btn a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.profile-box {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-info-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.profile-info-box .public-repos {
+    background-color: var(--blue);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.profile-info-box .public-gists {
+    background-color: var(--gray);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.profile-info-box .followers {
+    background-color: var(--green);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.profile-info-box .following {
+    background-color: var(--teal);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.profile-description-box {
+    border: 1px solid var(--border);
+    height: 60%;
+    margin-top: 8px;
+}
+
+
+
+/* Latest Repos Box Container */
+.latest-repos-box-container {
+    height: auto;
+}
+
+.latest-repos-title {
+    font-weight: 900;
+    width: 50%;
+}
+
+.latest-repo-box {
+    margin: 4px 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-repo-box .repo-name a {
+    text-decoration: none;
+}
+
+.repo-info-box {
+    display: flex;
+    width: 50%;
+}
+
+.repo-info-box .stars {
+    background-color: var(--blue);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.repo-info-box .watchers {
+    background-color: var(--gray);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.repo-info-box .forks {
+    background-color: var(--green);
+    padding: 4px 8px;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
